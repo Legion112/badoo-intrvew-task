@@ -1,3 +1,4 @@
-Read file.
-Sort in alphabetical order.
-Write to another file. 
+/**
+ * Есть файл /home/coderpad/data/letters.txt. В каждой строчке ровно один символ латинского алфавита (a-z).
+ * При помощи PHP нужно получить другой файл, где все строчки отсортированы в алфавитном порядке.
+ */
