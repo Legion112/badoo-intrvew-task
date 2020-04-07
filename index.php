@@ -2,21 +2,21 @@
 $file = fopen(__DIR__ . '/input.txt', 'r');
 $map = [];
 while(!feof($file)) {
-    $latter = fgets($file)[0];
-    if(!isset($map[$latter])) {
-        $map[$latter] = 1;
+    $letter = fgets($file)[0];
+    if(!isset($map[$letter])) {
+        $map[$letter] = 1;
     } else {
-        $map[$latter]++;
+        $map[$letter]++;
     }
 }
 ksort($map);
 fclose($file);
 
 $file = fopen(__DIR__ . '/output.txt', 'w');
-foreach ($map as $latter => $repeat) {
+foreach ($map as $letter => $repeat) {
     while($repeat !== 0) {
         $repeat--;
-        fwrite($file, $latter . PHP_EOL);
+        fwrite($file, $letter . PHP_EOL);
     }
 }
 fclose($file);
